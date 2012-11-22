@@ -25,7 +25,10 @@ realtime.js is implemented using [MutationObservers](https://developer.mozilla.o
 
 ## Support
 
- - Firefox 17
+ - Firefox 17+
+ - Chrome 23+
+ - Safari 5+
+ - Opera 11+
 
 ## Testing and Benchmarkings
 
