@@ -19,6 +19,14 @@ Whenever an element which matches the selector enters the DOM, the callback is c
 
 [Read More](https://github.com/tomasreimers/realtime.js/blob/master/DOCS.md)
 
+## Necessary Files
+
+ - `/sizzle/sizzle.js` - Sizzle
+ - `/realtime.js` - realtime
+
+    <script type="text/javascript" src="sizzle.js"></script>
+    <script type="text/javascript" src="realtime.js"></script>
+
 ## Implementation
 
 realtime.js is implemented using [MutationObservers](https://developer.mozilla.org/en-US/docs/DOM/MutationObserver); additionally, the browser does not support mutation observers, realtime.js will fallback to simply checking the page for new items every second.
