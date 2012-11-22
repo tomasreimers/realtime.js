@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>realtime example</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../realtime.min.js"></script>
+        <script type="text/javascript">
+            rt('body').act(function (){
+                this.innerHTML = this.innerHTML.replace(/\*(.+?)\*/g, '<b>$1</b>')
+            });
+        </script>
+    </head>
+    <body>
+        This example doesn't do much else than show how you could use *realtime.js* as a *replacement* for on DOM load.
+    </body>
+</html>

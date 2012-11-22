@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>realtime example</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../realtime.min.js"></script>
+        <script type="text/javascript">
+            rt('.placeholder').act(function (){
+                var placeholder_width = this.getAttribute('data-width');
+                var placeholder_height = this.getAttribute('data-height');
+                var placeholder_url = 'http://placekitten.com/g/' + placeholder_height + '/' + placeholder_width;
+                this.innerHTML = '<img alt="placeholder" src="' + placeholder_url + '" />';
+            });
+            function inject(){
+                $('body').append("<div class='placeholder' data-width='300' data-height='400'></div>");
+             }
+        </script>
+    </head>
+    <body>
+        The following example would work even if the dummy tag was loaded through AJAX or <a href='#' onclick='inject()'>injected dynamically</a>.
+        <div class='placeholder' data-width='300' data-height='400'></div>
+    </body>
+</html>

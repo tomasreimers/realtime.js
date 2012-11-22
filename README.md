@@ -8,6 +8,12 @@
 
 realtime.js allows you to write JavaScript for elements that have not yet been created.
 
+## Use cases
+
+ - Ajax navigated applications (where `$(document).ready()`, does not mean the actual content has been loaded)
+ - Libraries/Frameworks (i.e. if you need to manipulate all the elements with the attribute `data-role`, but the developer is liable to inject them into the page after DOM load)
+ - Any other instance where document ready does not mean that all the content has been loaded
+
 ## Usage
 
     realtime({selector}).act({callback})
