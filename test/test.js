@@ -92,10 +92,10 @@ $(document).ready(function (){
     window.totalTests++;
 
     // Convenience - Style, Value
-    var currentTest6 = rt('.test6').style('opacity', '0.4');
+    var currentTest6 = rt('.test6').style('height', '10px');
     $('.test_container').append('<div class="test6"></div>');
     setTimeout(function (){
-        if ($('.test6').css('opacity') == '0.4'){
+        if ($('.test6').css('height') == '10px'){
             window.testStatus('Convenience - Style, Value', true);
         }
         else {
@@ -135,15 +135,15 @@ $(document).ready(function (){
 
     // Convenience - Style, Function
     window.currentTestPassed9 = false;
-    var currentTest9 = rt('.test9').style('opacity', function (el){
+    var currentTest9 = rt('.test9').style('height', function (el){
         if ($(el).is('.test9')){
             window.currentTestPassed9 = true;
         }
-        return '0.4';
+        return '10px';
     });
     $('.test_container').append('<div class="test9"></div>');
     setTimeout(function (){
-        if ($('.test9').css('opacity') == '0.4' && window.currentTestPassed9){
+        if ($('.test9').css('height') == '10px' && window.currentTestPassed9){
             window.testStatus('Convenience - Style, Function', true);
         }
         else {
@@ -194,10 +194,10 @@ $(document).ready(function (){
     window.totalTests++;
 
     // Misc - Chaining
-    var currentTest12 = rt('.test12').attribute('data-test', 'hello').style('opacity', '0.4');
+    var currentTest12 = rt('.test12').attribute('data-test', 'hello').style('height', '10px');
     $('.test_container').append('<div class="test12"></div>');
     setTimeout(function (){
-        if ($('.test12').attr('data-test') == 'hello' && $('.test12').css('opacity') == '0.4'){
+        if ($('.test12').attr('data-test') == 'hello' && $('.test12').css('height') == '10px'){
             window.testStatus('Misc - Chaining', true);
         }
         else {
