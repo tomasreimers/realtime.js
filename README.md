@@ -12,7 +12,7 @@ While that is fine, it can become probablematic; it becomes especially probablem
 
     realtime({selector}).act({callback})
 
-*selector* - A [Sizzle supported selector](https://github.com/jquery/sizzle/wiki/Sizzle-Documentation) (Sizzle is what runs jQuery; if it is a jQuery selector, it is a Sizzle selector)
+*selector* - A [Sizzle supported selector](https://github.com/jquery/sizzle/wiki/Sizzle-Documentation) (Sizzle is what runs jQuery; if it is a jQuery selector, it is a Sizzle selector)  
 *callback* - The function to call when an element is matched (it is called with the `this` keyword bound to the matched element
 
 Whenever an element which matches the selector enters the DOM, the callback is called on it.
