@@ -29,6 +29,7 @@ realtime.js is implemented using [MutationObservers](https://developer.mozilla.o
  - Chrome 23+
  - Safari 5+
  - Opera 11+
+ - IE 9+
 
 ## Testing and Benchmarkings
 
