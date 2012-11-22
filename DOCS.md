@@ -83,7 +83,7 @@ or
 
 ## Alias
 
-Unless you change the `realtime.config.noConflict` setting to be true, realtime is availiable under the alias `rt`.
+Unless you change the `realtime.config.noConflict` setting to be true, realtime is available under the alias `rt`.
 
     rt('.nav-list').act(function (){
         this.style.color = '#FF0000';
