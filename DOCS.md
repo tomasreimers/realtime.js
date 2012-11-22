@@ -55,12 +55,12 @@ Although you can do this with `.act()`, realtime provides a couple convenience f
 
 ### style
 
-*property* (string) - css property to affect
+*property* (string) - css property to affect  
 *value* (string OR function) - the value of the css property; if it is a function, it should accept one argument (the HTML elements that was matched), and the return value will be used.
 
 ### attribute
 
-*property* (string) - attribute to affect
+*property* (string) - attribute to affect  
 *value* (string OR function) - the value to set the attribute equal to; if it is a function, it should accept one argument (the HTML elements that was matched), and the return value will be used.
 
 ### content
