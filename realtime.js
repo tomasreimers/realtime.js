@@ -169,7 +169,9 @@
       * The handler for a record element
       */ 
 
-     var whitespace = /^\s*$/;
+     // OLD WHITESPACE VALIDATION (for reference)
+     // var whitespace = /^\s*$/;
+     // !(mutation.addedNodes[i].nodeType === 3 && whitespace.test(mutation.addedNodes[i].nodeValue))
 
      realtime.recordHandler = function (mutations){
           // iterate thru each mutation
@@ -177,7 +179,7 @@
                // handle each added node
                for (var i = 0; i < mutation.addedNodes.length; i++){
                     // don't waste time on whitespace nodes
-                    if (!(mutation.addedNodes[i].nodeType === 3 && whitespace.test(mutation.addedNodes[i].nodeValue))){
+                    if (mutation.addedNodes[i].nodeType === 1){
                          realtime.elementHandler(mutation.addedNodes[i]);    
                     }
                }
