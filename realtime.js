@@ -158,6 +158,13 @@
       */ 
 
      realtime.elementHandler = function (element){
+          console.log(element);
+          // child nodes already in element when it is loaded into the document are not considered mutations to the document
+          for (var i = 0; i < element.childNodes; i++){
+              if (element.childNodes[i].nodeType === 1){
+                  realtime.elementHandler(element.childNodes[i]);    
+              }
+          }
           for (var i = 0; i < realtime.targets.length; i++){
                if (Sizzle.matchesSelector(element, realtime.targets[i].selector)){
                     realtime.targets[i].executeOn(element);

@@ -235,7 +235,7 @@ $(document).ready(function (){
     var currentTest15 = rt('.test15').act(function (){
         window.currentTestPassed15 = true;
     });
-    $('.test_container').append('<p><div class="test15"></div></p>');
+    $('.test_container').append('<div><div class="test15"></div></div>');
     setTimeout(function (){
         if (window.currentTestPassed15){
             window.testStatus('Nesting - At Once', true);
@@ -252,7 +252,7 @@ $(document).ready(function (){
     var currentTest16 = rt('.test16').act(function (){
         window.currentTestPassed16 = true;
     });
-    $('.test_container').append('<p class="test16_holder"></p>');
+    $('.test_container').append('<div class="test16_holder"></div>');
     $('.test16_holder').append('<div class="test16"></div>');
     setTimeout(function (){
         if (window.currentTestPassed16){
