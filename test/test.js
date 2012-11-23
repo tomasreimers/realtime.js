@@ -230,6 +230,42 @@ $(document).ready(function (){
     }, 5000);
     window.totalTests++;
 
+    // Nesting - At Once
+    window.currentTestPassed15 = false;
+    var currentTest15 = rt('.test15').act(function (){
+        window.currentTestPassed15 = true;
+    });
+    $('.test_container').append('<p><div class="test15"></div></p>');
+    setTimeout(function (){
+        if (window.currentTestPassed15){
+            window.testStatus('Nesting - At Once', true);
+        }
+        else {
+            window.testStatus('Nesting - At Once', false);
+        }
+        currentTest15.detach();
+    }, 5000);
+    window.totalTests++;
+
+    // Nesting - Two Step
+    window.currentTestPassed16 = false;
+    var currentTest16 = rt('.test16').act(function (){
+        window.currentTestPassed16 = true;
+    });
+    $('.test_container').append('<p class="test16_holder"></p>');
+    $('.test16_holder').append('<div class="test16"></div>');
+    setTimeout(function (){
+        if (window.currentTestPassed16){
+            window.testStatus('Nesting - Two Step', true);
+        }
+        else {
+            window.testStatus('Nesting - Two Step', false);
+        }
+        currentTest16.detach();
+    }, 5000);
+    window.totalTests++;
+
+    // Aestethics
     window.timeLeft = 6;
     window.countdown = function (){
         window.timeLeft--;
