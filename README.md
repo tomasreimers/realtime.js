@@ -37,7 +37,7 @@ Whenever an element that matches the selector enters the DOM, the callback is ca
 
 realtime.js is implemented using [MutationObservers](https://developer.mozilla.org/en-US/docs/DOM/MutationObserver); if the browser does not support mutation observers, realtime.js will fallback to checking the page for new items every second.
 
-## Support
+## Support (Tested on)
 
  - Firefox 17+
  - Chrome 23+
